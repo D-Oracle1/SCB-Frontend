@@ -1,0 +1,213 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8" />
+      <title>Login - Vocational Banking</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta content="Login to your account" name="description" />
+      
+            <link rel="icon" href="../assets/images/brand/favicon_1760007385.ico" type="image/ico">
+            <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+      <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+      <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+      <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <style>
+body{background-color:#f0f5f9}.main-login-container{padding:20px}.login-card{border:none;border-radius:15px;box-shadow:none;animation:fadeIn .8s ease-in-out}@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}.card-body{padding:40px}.card-title{font-size:1.7rem;font-weight:700;color:#333;margin-bottom:5px;text-align:left}.card-subtitle{font-size:.8rem;color:#6c757d;text-align:left;margin-bottom:2rem}.form-label{font-weight:500;color:#495057}.form-control{border-radius:10px;padding:12px;transition:all .3s ease}.form-control:focus{border-color:#4f46e5;box-shadow:0 0 0 .25rem rgba(79,70,229,.25)}.btn-primary{background:linear-gradient(135deg,#4f46e5 0%,#3b82f6 100%);border:none;font-weight:600;border-radius:10px;padding:12px;transition:background-color .3s ease,transform .2s ease}.btn-primary:hover{background-color:#4338ca;border-color:#4338ca;transform:translateY(-2px)}.alert-section{margin-top:1rem;margin-bottom:1rem}.alert-secondary{background-color:#e2e3e5;border-color:#d3d6d8;color:#41464b;font-size:12px}.alert-icon{color:#4f46e5}.link-section{background:#f8f9fa;border-top:1px solid #e9ecef;padding:20px;border-bottom-left-radius:15px;border-bottom-right-radius:15px;margin-top:20px}.link-section p{margin-bottom:10px}.link-section a{color:#6c757d;transition:color .3s ease;text-decoration:none}.link-section a:hover{color:#4f46e5}.footer-text{color:#888;font-size:.8rem;text-align:center;margin-top:40px}.logo{display:block;margin-bottom:30px; height: 30px;}
+.back-to-home-link{display:inline-flex;align-items:center;margin-bottom:15px;color:#6c757d;font-size:.9rem;font-weight:500;text-decoration:none;transition:color .3s ease}.back-to-home-link:hover{color:#4f46e5}.back-to-home-link svg{width:16px;height:16px;margin-right:4px;fill:currentColor}
+.swal2-popup{border-radius:12px!important;padding:1.5rem!important;box-shadow:0 10px 30px rgba(0,0,0,.15),0 0 0 1px rgba(0,0,0,.05)!important}.swal2-title{font-size:1.5rem!important;font-weight:700!important;color:#1f2937!important;margin-bottom:.5rem!important}.swal2-content{font-size:1rem!important;color:#4b5563!important;line-height:1.4!important}.swal2-confirm{background-color:#4f46e5!important;border:none!important;font-weight:600!important;border-radius:8px!important;padding:10px 20px!important;transition:background-color .2s,transform .1s!important}.swal2-confirm:hover{background-color:#4338ca!important;transform:translateY(-1px)!important;box-shadow:0 4px 10px rgba(79,70,229,.3)!important}.swal2-cancel{background-color:#f3f4f6!important;color:#4b5563!important;border:1px solid #d1d5db!important;font-weight:500!important;border-radius:8px!important;padding:10px 20px!important;transition:background-color .2s!important}.swal2-cancel:hover{background-color:#e5e7eb!important}.swal2-icon.swal2-error{border-color:#ef4444!important;color:#ef4444!important}.swal2-icon.swal2-error [class^=swal2-x-mark-line]{background-color:#ef4444!important}.swal2-icon.swal2-info{border-color:#4f46e5!important;color:#4f46e5!important}
+
+.link-section a:hover .fa-angle-right{transform:translateX(3px)!important;transition:transform .3s ease-out!important}
+
+.password-input-wrapper {
+    position: relative;
+    margin-bottom: 0.3rem;
+}
+
+.toggle-password-visibility {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    padding: 0 10px;
+    cursor: pointer;
+    color: #999;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.password-input-wrapper .form-control {
+    padding-right: 40px;
+}
+
+small.text-muted {
+    display: block;
+    line-height: 17px;
+}
+      </style>
+   </head>
+   <body>
+      <div class="account-pages my-5 pt-sm-2">
+         <div class="container">
+            <div class="row justify-content-center">
+               <div class="col-md-8 col-lg-6 col-xl-5">
+                  
+                  <a href="../index-2.html" class="back-to-home-link">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+                      Back to Home Page
+                  </a>
+                  <div class="card overflow-hidden login-card">
+                     <div class="card-body">
+                        
+                        <div class="text-center mb-2">
+                           <a href="../index-2.html">
+                              <img src="../assets/images/brand/logo_1760007385.png" alt="" height="20" class="logo">
+                           </a>
+                           <h1 class="card-title">Log on to Online Banking.</h1>
+                           <p class="card-subtitle">Securely sign in to your account to continue.</p>
+                        </div>
+                        
+                                                
+                        <div class="alert-section">
+    <div class="alert alert-secondary alert-dismissible fade show" role="alert">
+        <div class="alert-content d-flex align-items-center">
+            <i class="fas fa-info-circle alert-icon me-2"></i>
+            <span>Please enter your email address. If you can't remember your email, select 'Forgotten your password?' below for more help.</span>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+</div>
+                        
+                        <form id="multiStepForm" method="POST">
+                           <div id="step1">
+                              <div class="mb-3">
+                                 <label for="email-1" class="form-label">Email Address</label>
+                                 <input type="text" class="form-control" id="email-1" name="login" aria-describedby="email-1" placeholder="Enter your email" required>
+                                 <div class="invalid-feedback">Please enter a valid email address.</div>
+                              </div>
+                              <div class="mb-3 form-check">
+                                  <input type="checkbox" class="form-check-input" id="rememberMe">
+                                  <label class="form-check-label text-muted" for="rememberMe">Remember Me</label>
+                              </div>
+                              <div class="mt-4 d-grid">
+                                 <button type="button" class="btn btn-primary waves-effect waves-light" onclick="validateEmail()">Continue</button>
+                              </div>
+                           </div>
+                           
+                           <div id="step2" style="display: none;">
+                              <div class="mb-3">
+                                 <label for="password" class="form-label">Password</label>
+                                 <div class="password-input-wrapper">
+    <input type="password" class="form-control" name="password" id="password-1" placeholder="Enter password" required>
+    
+    <button class="toggle-password-visibility" type="button" id="password-addon">
+        <i class="mdi mdi-eye-outline"></i>
+    </button>
+</div>
+                                 <small class="text-muted">Please ensure your password is correct. Multiple unsuccessful attempts may result in account disablement.</small>
+                              </div>
+                              <div class="mt-4 d-grid">
+                                 <button name="go" id="go" class="btn btn-primary w-100 waves-effect waves-light" type="submit">Sign In</button>
+                              </div>
+                           </div>
+                        </form>
+                     </div>
+                     
+                     <div class="link-section">
+                         <p><a href="#" class="contactLink">Forgotten your username or password? <i class="fas fa-angle-right"></i></a></p>
+                         <p><a href="register.html">Not registered for Online Banking? <i class="fas fa-angle-right"></i></a></p>
+                     </div>
+                  </div>
+                  
+                  <p class="footer-text">
+                      &copy; Vocational Banking Copyright Vocational Banking LLC 2007-2025. All rights reserved. Vocational Banking® is a registered trademark.
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+      
+      <script src="assets/libs/jquery/jquery.min.js"></script>
+      <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="assets/libs/metismenu/metisMenu.min.js"></script>
+      <script src="assets/libs/simplebar/simplebar.min.js"></script>
+      <script src="assets/libs/node-waves/waves.min.js"></script>
+      <script src="assets/js/pages/validation.init.js"></script>
+      
+      <script>async function validateEmail() {
+  const emailField = document.getElementById('email-1');
+  const email = emailField.value.trim();
+
+  if (!validateEmailFormat(email)) {
+    emailField.classList.add('is-invalid');
+    return;
+  }
+
+  try {
+    const res = await fetch('/api/auth/check-email', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email }),
+    });
+    const data = await res.json();
+
+    if (data.exists) {
+      document.getElementById('step1').style.display = 'none';
+      document.getElementById('step2').style.display = 'block';
+    } else {
+      Swal.fire({
+        icon: 'error',
+        title: 'Account not found',
+        text: 'No account is registered with this email address.',
+      });
+    }
+  } catch (err) {
+    Swal.fire('Error', 'Unable to connect to the server.', 'error');
+  }
+}
+
+document.getElementById("multiStepForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const email = document.getElementById("email-1").value.trim();
+  const password = document.getElementById("password-1").value.trim();
+
+  try {
+    const res = await fetch('/api/auth/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, password }),
+    });
+    const data = await res.json();
+
+    if (data.success) {
+      localStorage.setItem('token', data.token);
+      Swal.fire({
+        icon: 'success',
+        title: 'Login Successful',
+        text: 'Redirecting to your dashboard...',
+        timer: 2000,
+        showConfirmButton: false
+      }).then(() => {
+        window.location.href = '/dashboard.html';
+      });
+    } else {
+      Swal.fire('Login Failed', data.message, 'error');
+    }
+  } catch (err) {
+    Swal.fire('Error', 'Something went wrong while logging in.', 'error');
+  }
+});
+
+
+      </script>
+   </body>
+
+<!-- Mirrored from vocational.codedwebmasters.com/customer/login.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Oct 2025 01:31:18 GMT -->
+</html>
